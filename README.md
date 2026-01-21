@@ -26,6 +26,24 @@ Nota: Abre tu navegador en la URL que aparece en la terminal (normalmente http:/
 
 Se carga mediante Lazy Loading y visualiza los datos transformados de la API.Usuarios.jsxConsume la API externa (JSONPlaceholder) y renderiza el listado en una tabla.
 
-Home.jsxPágina de aterrizaje pública con navegación básica.
-⚙️ Lógica y Componentes Clave🔐 Estado Globalsrc/store/AuthContext.jsxImplementación de la Context API. Permite que toda la aplicación sepa si el usuario está logueado, persistiendo la sesión entre navegaciones.
-🛡️ Seguridadsrc/router/PrivateRoute.jsxComponente "Guardián". Protege las rutas sensibles (como Dashboard). Si no detecta un usuario en el contexto, redirige automáticamente al Login.🌐 Datos Externossrc/services/api.jsCapa de servicio que aísla la lógica de fetch. Se encarga de la comunicación limpia con la API externa.⚡ Configuración (Core)App.jsxConfigura el enrutador principal (BrowserRouter) y define la carga perezosa (Suspense + lazy) para optimizar el rendimiento de la aplicación.
+* **`Home.jsx`**: Página de aterrizaje pública con navegación básica.
+
+<br>
+
+### ⚙️ Lógica y Componentes Clave
+
+#### 🔐 Estado Global
+* **`src/store/AuthContext.jsx`**
+  Implementación de la **Context API**. Permite que toda la aplicación sepa si el usuario está logueado, persistiendo la sesión entre navegaciones.
+
+#### 🛡️ Seguridad
+* **`src/router/PrivateRoute.jsx`**
+  Componente "Guardián". Protege las rutas sensibles (como Dashboard). Si no detecta un usuario en el contexto, **redirige automáticamente al Login**.
+
+#### 🌐 Datos Externos
+* **`src/services/api.js`**
+  Capa de servicio que aísla la lógica de `fetch`. Se encarga de la comunicación limpia con la API externa.
+
+#### ⚡ Configuración (Core)
+* **`App.jsx`**
+  Configura el enrutador principal (`BrowserRouter`) y define la carga perezosa (`Suspense` + `lazy`) para optimizar el rendimiento de la aplicación.
